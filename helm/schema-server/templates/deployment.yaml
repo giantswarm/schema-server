@@ -36,11 +36,14 @@ spec:
 
       containers:
         - name: {{ .Values.image.name }}
-          image: quay.io/giantswarm/{{ .Values.image.name }}:{{ .Values.image.tag }}
+          image: {{ .Values.image.registry }}/{{ .Values.image.name }}:{{ .Values.image.tag }}
 
           ports:
             - containerPort: 8000
               name: http
+
+          securityContext:
+            readOnlyRootFilesystem: true
           
           volumeMounts:
             - mountPath: /var/cache/nginx
