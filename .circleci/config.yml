@@ -16,3 +16,17 @@ workflows:
           filters:
             tags:
               only: /^v.*/
+
+      - architect/push-to-docker:
+          context: "architect"
+          name: "push-to-quay"
+          image: "quay.io/giantswarm/schema-server"
+          username_envar: "QUAY_USERNAME"
+          password_envar: "QUAY_PASSWORD"
+          build-context: "."
+          dockerfile: "./Dockerfile"
+          tag-suffix: ""
+          filters:
+            # Trigger job also on git tag.
+            tags:
+              only: /^v.*/
