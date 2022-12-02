@@ -1,5 +1,7 @@
 FROM quay.io/giantswarm/nginx-unprivileged:1.22-alpine
 
+VOLUME ["/tmp/nginx"]
+
 USER 0
 
 # remove default configuration

@@ -35,8 +35,8 @@ spec:
             weight: 100
 
       containers:
-        - name: {{ .Values.image.name }}
-          image: {{ .Values.image.registry }}/{{ .Values.image.name }}:{{ .Values.image.tag }}
+        - name: {{ .Values.name }}
+          image: "{{ .Values.image.registry }}/{{ .Values.image.name }}:{{ .Chart.Version }}"
 
           ports:
             - containerPort: 8000
@@ -46,6 +46,8 @@ spec:
             readOnlyRootFilesystem: true
           
           volumeMounts:
+            - mountPath: /tmp/nginx
+              name: tmp-volume
             - mountPath: /var/cache/nginx
               name: cache-volume
 
@@ -70,6 +72,8 @@ spec:
         - name: docs-proxy-pull-secret
       
       volumes:
+        - name: tmp-volume
+          emptyDir: {}
         - name: cache-volume
           emptyDir: {}
 
