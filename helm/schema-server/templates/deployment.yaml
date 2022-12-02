@@ -36,7 +36,7 @@ spec:
 
       containers:
         - name: {{ .Values.name }}
-          image: "{{ .Values.image.registry }}/{{ .Values.image.name }}:{{ .Chart.AppVersion }}"
+          image: "{{ .Values.image.registry }}/{{ .Values.image.name }}:{{ .Chart.Version }}"
 
           ports:
             - containerPort: 8000
