@@ -35,7 +35,7 @@ spec:
             weight: 100
 
       containers:
-        - name: {{ .Values.image.name }}
+        - name: {{ .Values.name }}
           image: "{{ .Values.image.registry }}/{{ .Values.image.name }}:{{ .Chart.AppVersion }}"
 
           ports:
