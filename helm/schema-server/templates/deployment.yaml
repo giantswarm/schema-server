@@ -41,6 +41,9 @@ spec:
           ports:
             - containerPort: 8000
               name: http
+
+          securityContext:
+            readOnlyRootFilesystem: true
           
           volumeMounts:
             - mountPath: /var/cache/nginx
