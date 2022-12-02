@@ -74,7 +74,7 @@ spec:
       volumes:
         - name: tmp-volume
           emptyDir: {}
-         - name: cache-volume
+        - name: cache-volume
           emptyDir: {}
 
       serviceAccount: {{ .Values.name }}
