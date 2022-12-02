@@ -7,6 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- Added: Dummy entry
+- Added first version of the service.
 
 [Unreleased]: https://github.com/giantswarm/schema-server/tree/main
