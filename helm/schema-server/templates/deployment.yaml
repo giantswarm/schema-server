@@ -46,8 +46,8 @@ spec:
             readOnlyRootFilesystem: true
           
           volumeMounts:
-            - mountPath: /var/cache/nginx
-              name: cache-volume
+            - mountPath: /tmp/nginx
+              name: tmp-volume
 
           resources:
             requests:
@@ -70,7 +70,7 @@ spec:
         - name: docs-proxy-pull-secret
       
       volumes:
-        - name: cache-volume
+        - name: tmp-volume
           emptyDir: {}
 
       serviceAccount: {{ .Values.name }}
