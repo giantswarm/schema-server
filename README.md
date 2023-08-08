@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/giantswarm/schema-server.svg?style=shield)](https://circleci.com/gh/giantswarm/schema-server)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/giantswarm/schema-server/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/giantswarm/schema-server/tree/main)
 
 # Schema server
 
