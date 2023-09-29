@@ -7,9 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.2] - 2023-09-29
+
+- Update NGINX to v1.23
+
 ## [0.0.1] - 2022-12-02
 
 - Added first version of the service.
 
-[Unreleased]: https://github.com/giantswarm/schema-server/compare/v0.0.1...HEAD
+[Unreleased]: https://github.com/giantswarm/schema-server/compare/v0.0.2...HEAD
+[0.0.2]: https://github.com/giantswarm/schema-server/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/giantswarm/schema-server/releases/tag/v0.0.1
