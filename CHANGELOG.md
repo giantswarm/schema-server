@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.2] - 2023-09-29
 
+- Update NGINX to v1.23
+
 ## [0.0.1] - 2022-12-02
 
 - Added first version of the service.
