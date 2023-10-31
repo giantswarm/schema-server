@@ -1,3 +1,4 @@
+{{- if not .Values.podSecurityStandards.enforced }}
 ---
 apiVersion: policy/v1beta1
 kind: PodSecurityPolicy
@@ -23,3 +24,4 @@ spec:
   - secret
   - configMap
   - emptyDir
+{{- end }}
