@@ -8,3 +8,6 @@ image:
 
 hostnames:
   - schema.giantswarm.io
+
+podSecurityStandards:
+  enforced: false
