@@ -3,7 +3,7 @@ orbs:
   architect: giantswarm/architect@4.35.5
 
 workflows:
-  package-and-push-chart-on-tag:
+  build-workflow:
     jobs:
       - architect/push-to-registries:
           context: architect
