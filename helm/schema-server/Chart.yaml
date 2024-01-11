@@ -2,7 +2,7 @@ apiVersion: v2
 name: schema-server
 description: Serves JSON schema provided by Giant Swarm
 home: https://github.com/giantswarm/schema-server
-icon: https://camo.githubusercontent.com/752aea2bb973cd0af33354afe331a41dbff16ff2d4e7fcdb97078349096b926d/68747470733a2f2f6a736f6e2d736368656d612e6f72672f6173736574732f6c6f676f2e737667
+icon: https://s.giantswarm.io/app-icons/json-schema/1/light.svg
 sources:
   - https://github.com/giantswarm/schema-server
 version: 0.1.0
