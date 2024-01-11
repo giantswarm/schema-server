@@ -9,3 +9,4 @@ version: 0.1.0
 appVersion: 0.0.1
 annotations:
   application.giantswarm.io/team: team-rainbow
+  ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/json-schema/1/logo_light.svg
