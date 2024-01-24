@@ -9,5 +9,6 @@ image:
 hostnames:
   - schema.giantswarm.io
 
-podSecurityStandards:
-  enforced: false
+global:
+  podSecurityStandards:
+    enforced: false
