@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2024-01-29
+
+- Move pss values under the global property
+
 ## [0.1.0] - 2023-11-10
 
 ### Changed
@@ -21,7 +25,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added first version of the service.
 
-[Unreleased]: https://github.com/giantswarm/schema-server/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/giantswarm/schema-server/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/giantswarm/schema-server/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/giantswarm/schema-server/compare/v0.0.2...v0.1.0
 [0.0.2]: https://github.com/giantswarm/schema-server/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/giantswarm/schema-server/releases/tag/v0.0.1
