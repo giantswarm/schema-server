@@ -8,6 +8,7 @@ image:
 
 hostnames:
   - schema.giantswarm.io
+  - schema.operations.awsprod.gigantic.io
 
 global:
   podSecurityStandards:
