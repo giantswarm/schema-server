@@ -75,9 +75,6 @@ spec:
             initialDelaySeconds: 10
             periodSeconds: 30
             timeoutSeconds: 2
-
-      imagePullSecrets:
-        - name: docs-proxy-pull-secret
       
       volumes:
         - name: tmp-volume
