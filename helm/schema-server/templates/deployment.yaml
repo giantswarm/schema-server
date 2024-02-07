@@ -41,6 +41,7 @@ spec:
           image: "{{ .Values.image.registry }}/{{ .Values.image.name }}:{{ .Chart.Version }}"
           securityContext:
             allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
             runAsNonRoot: true
             seccompProfile:
               type: RuntimeDefault
@@ -52,9 +53,6 @@ spec:
             - containerPort: 8000
               name: http
 
-          securityContext:
-            readOnlyRootFilesystem: true
-          
           volumeMounts:
             - mountPath: /tmp/nginx
               name: tmp-volume
