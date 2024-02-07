@@ -1,7 +1,7 @@
 name: schema-server
 
 image:
-  registry: quay.io
+  registry: gsoci.azurecr.io
   name: giantswarm/schema-server
   tag: v0.0.1
   pullPolicy: IfNotPresent
