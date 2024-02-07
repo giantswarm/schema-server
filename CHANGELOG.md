@@ -7,11 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Set registry to gsoci.azurecr.io
+
 ## [0.1.2] - 2024-02-05
 
 ## [0.1.1] - 2024-01-29
 
-- Move pss values under the global property
+- Move PSS values under the global property
 
 ## [0.1.0] - 2023-11-10
 
