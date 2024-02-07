@@ -23,6 +23,8 @@ spec:
     spec:
       securityContext:
         runAsUser: 1000
+        seccompProfile:
+          type: RuntimeDefault
 
       affinity:
         podAntiAffinity:
@@ -37,14 +39,20 @@ spec:
       containers:
         - name: {{ .Values.name }}
           image: "{{ .Values.image.registry }}/{{ .Values.image.name }}:{{ .Chart.Version }}"
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            seccompProfile:
+              type: RuntimeDefault
+            capabilities:
+              drop:
+                - ALL
 
           ports:
             - containerPort: 8000
               name: http
 
-          securityContext:
-            readOnlyRootFilesystem: true
-          
           volumeMounts:
             - mountPath: /tmp/nginx
               name: tmp-volume
@@ -67,9 +75,6 @@ spec:
             initialDelaySeconds: 10
             periodSeconds: 30
             timeoutSeconds: 2
-
-      imagePullSecrets:
-        - name: docs-proxy-pull-secret
       
       volumes:
         - name: tmp-volume
