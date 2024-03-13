@@ -10,6 +10,14 @@ hostnames:
   - schema.giantswarm.io
   - schema.operations.awsprod.gigantic.io
 
+resources:
+  requests:
+    cpu: 5m
+    memory: 5M
+  limits:
+    cpu: 50m
+    memory: 20M
+
 global:
   podSecurityStandards:
     enforced: false
