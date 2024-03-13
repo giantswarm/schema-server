@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Lower resource requests, make requests and limits configurable.
+
 ## [0.1.3] - 2024-02-07
 
 - Set registry to gsoci.azurecr.io
