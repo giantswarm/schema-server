@@ -6,9 +6,14 @@ image:
   tag: v0.0.1
   pullPolicy: IfNotPresent
 
-hostnames:
-  - schema.giantswarm.io
-  - schema.operations.awsprod.gigantic.io
+ingress:
+  hostnames:
+    - schema.giantswarm.io
+    - schema.operations.awsprod.gigantic.io
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-giantswarm
+    kubernetes.io/tls-acme: "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
 
 resources:
   requests:
