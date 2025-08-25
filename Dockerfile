@@ -1,4 +1,4 @@
-FROM gsoci.azurecr.io/giantswarm/nginx-unprivileged:1.27-alpine
+FROM gsoci.azurecr.io/giantswarm/nginx-unprivileged:1.29-alpine
 
 VOLUME ["/tmp/nginx"]
 
