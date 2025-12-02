@@ -10,6 +10,32 @@ hostnames:
   - schema.giantswarm.io
   - schema.operations.awsprod.gigantic.io
 
+ingress:
+  enabled: true
+
+route:
+  enabled: false
+  parentRefs:
+    redirect:
+    - group: gateway.networking.k8s.io
+      kind: Gateway
+      name: giantswarm-default
+      namespace: envoy-gateway-system
+      sectionName: http
+    https:
+    - group: gateway.networking.k8s.io
+      kind: Gateway
+      name: giantswarm-default
+      namespace: envoy-gateway-system
+      sectionName: https
+    - group: gateway.networking.k8s.io
+      kind: Gateway
+      name: giantswarm-default
+      namespace: envoy-gateway-system
+      sectionName: giantswarmio-https
+  labels: {}
+  annotations: {}
+
 resources:
   requests:
     cpu: 5m
