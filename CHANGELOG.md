@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2025-12-02
+
 - Add optional HTTPRoutes for Gateway API
 
 ## [0.1.4] - 2024-03-13
@@ -38,7 +40,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added first version of the service.
 
-[Unreleased]: https://github.com/giantswarm/schema-server/compare/v0.1.4...HEAD
+[Unreleased]: https://github.com/giantswarm/schema-server/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/giantswarm/schema-server/compare/v0.1.4...v0.2.0
 [0.1.4]: https://github.com/giantswarm/schema-server/compare/v0.1.3...v0.1.4
 [0.1.3]: https://github.com/giantswarm/schema-server/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/giantswarm/schema-server/compare/v0.1.1...v0.1.2
