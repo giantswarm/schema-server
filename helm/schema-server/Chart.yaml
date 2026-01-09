@@ -8,5 +8,6 @@ sources:
 version: 0.2.0
 appVersion: 0.0.1
 annotations:
-  application.giantswarm.io/team: honeybadger
-  ui.giantswarm.io/logo: https://s.giantswarm.io/app-icons/json-schema/1/logo_light.svg
+  io.giantswarm.application.audience: giantswarm
+  io.giantswarm.application.team: honeybadger
+  io.giantswarm.ui.logo: https://s.giantswarm.io/app-icons/json-schema/1/logo_light.svg
