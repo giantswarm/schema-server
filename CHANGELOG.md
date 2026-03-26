@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-03-26
+
 ### Removed
 
 - Remove PSP support and checks for `global.podSecurityStandards.enforced`
@@ -44,7 +46,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added first version of the service.
 
-[Unreleased]: https://github.com/giantswarm/schema-server/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/giantswarm/schema-server/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/giantswarm/schema-server/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/giantswarm/schema-server/compare/v0.1.4...v0.2.0
 [0.1.4]: https://github.com/giantswarm/schema-server/compare/v0.1.3...v0.1.4
 [0.1.3]: https://github.com/giantswarm/schema-server/compare/v0.1.2...v0.1.3
