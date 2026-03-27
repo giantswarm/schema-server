@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Use .Chart.AppVersion instead of .ChartVersion in deployment template
+- Use `.Chart.AppVersion` instead of `.Chart.Version` in deployment template
 
 ### Added
 
