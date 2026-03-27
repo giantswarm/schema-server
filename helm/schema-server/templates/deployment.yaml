@@ -38,7 +38,7 @@ spec:
 
       containers:
         - name: {{ .Values.name }}
-          image: "{{ .Values.image.registry }}/{{ .Values.image.name }}:{{ .Chart.Version }}"
+          image: "{{ .Values.image.registry }}/{{ .Values.image.name }}:{{ .Chart.AppVersion }}"
           securityContext:
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: true
