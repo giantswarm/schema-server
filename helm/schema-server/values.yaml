@@ -39,7 +39,9 @@ route:
 resources:
   requests:
     cpu: 5m
-    memory: 5M
+    memory: 5Mi
+    ephemeralStorage: 100Mi
   limits:
     cpu: 50m
-    memory: 20M
+    memory: 50Mi
+    ephemeralStorage: 500Mi
