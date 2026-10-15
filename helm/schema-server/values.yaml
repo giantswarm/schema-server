@@ -33,8 +33,8 @@ route:
       name: giantswarm-default
       namespace: envoy-gateway-system
       sectionName: giantswarmio-https
-  labels: {}
-  annotations: {}
+  labels: {}  # @schema additionalProperties: {type: string}
+  annotations: {}  # @schema additionalProperties: {type: string}
 
 resources:
   requests:
@@ -52,13 +52,13 @@ resources:
 # `kubernetes.io/arch=arm64:NoSchedule` taint that Giant Swarm arm64 node pools
 # carry. Requires multi-arch images; an amd64-only image crash-loops with
 # `exec format error` on an arm64 node.
-architecture: ""
+architecture: ""  # @schema enum: ["", amd64, arm64]
 
 # -- Node selector for all pods. Merged with `architecture`. Pinning to arm64
 # here also adds the arm64 taint toleration. A value that contradicts
 # `architecture` fails the render.
-nodeSelector: {}
+nodeSelector: {}  # @schema additionalProperties: {type: string}
 
 # -- Tolerations for all pods. The arm64 toleration is added automatically
 # when the pods are pinned to arm64.
-tolerations: []
+tolerations: []  # @schema item: object; itemRef: $k8s/_definitions.json#/definitions/io.k8s.api.core.v1.Toleration
