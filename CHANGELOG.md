@@ -10,7 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Chart: `architecture` value (`""`, `amd64`, `arm64`) plus `nodeSelector` and `tolerations`. `arm64` sets both the `kubernetes.io/arch` node selector and the toleration for the arm64 node pool taint.
-- Publish the container image for `linux/amd64` and `linux/arm64`.
+
+### Changed
+
+- Publish the container image for `linux/amd64` and `linux/arm64`, the default of the architect orb since the upgrade to v9 in [#150](https://github.com/giantswarm/schema-server/pull/150).
 
 ## [0.3.1] - 2026-03-27
 
