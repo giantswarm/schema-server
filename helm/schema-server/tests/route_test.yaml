@@ -1,0 +1,50 @@
+suite: HTTPRoute values
+templates:
+  - httproute.yaml
+tests:
+  - it: adds route labels and annotations to both routes
+    # Guards the values schema: labels and annotations are free-form string
+    # maps, so a regeneration that closes them must fail here.
+    set:
+      route:
+        enabled: true
+        labels:
+          team: honeybadger
+        annotations:
+          example.com/owner: honeybadger
+    asserts:
+      - hasDocuments:
+          count: 2
+      - equal:
+          path: metadata.labels.team
+          value: honeybadger
+      - equal:
+          path: metadata.annotations["example.com/owner"]
+          value: honeybadger
+
+  - it: rejects a non-string label value
+    set:
+      route:
+        enabled: true
+        labels:
+          replicas: 3
+    asserts:
+      - failedTemplate:
+          errorPattern: "at '/route/labels/replicas': got number, want string"
+
+  - it: passes a parentRef port through
+    # port is a valid Gateway API ParentReference field the template forwards
+    # as is, so the schema must allow it.
+    set:
+      route:
+        enabled: true
+        parentRefs:
+          https:
+            - name: giantswarm-default
+              namespace: envoy-gateway-system
+              port: 443
+    documentIndex: 1
+    asserts:
+      - equal:
+          path: spec.parentRefs[0].port
+          value: 443
