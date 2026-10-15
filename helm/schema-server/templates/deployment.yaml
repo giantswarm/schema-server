@@ -25,6 +25,9 @@ spec:
         runAsUser: 1000
         seccompProfile:
           type: RuntimeDefault
+      {{- with include "schema-server.podScheduling" . }}
+      {{- . | nindent 6 }}
+      {{- end }}
 
       affinity:
         podAntiAffinity:
