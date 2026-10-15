@@ -16,13 +16,13 @@ ingress:
 route:
   enabled: false
   parentRefs:
-    redirect:
+    redirect:  # @schema itemProperties: {group: {type: string}, kind: {type: string}, name: {type: string}, namespace: {type: string}, sectionName: {type: string}, port: {type: integer}}
     - group: gateway.networking.k8s.io
       kind: Gateway
       name: giantswarm-default
       namespace: envoy-gateway-system
       sectionName: http
-    https:
+    https:  # @schema itemProperties: {group: {type: string}, kind: {type: string}, name: {type: string}, namespace: {type: string}, sectionName: {type: string}, port: {type: integer}}
     - group: gateway.networking.k8s.io
       kind: Gateway
       name: giantswarm-default
@@ -38,13 +38,13 @@ route:
 
 resources:
   requests:
-    cpu: 5m
-    memory: 5Mi
-    ephemeralStorage: 100Mi
+    cpu: 5m  # @schema type: [string, number]
+    memory: 5Mi  # @schema type: [string, number]
+    ephemeralStorage: 100Mi  # @schema type: [string, number]
   limits:
-    cpu: 50m
-    memory: 50Mi
-    ephemeralStorage: 500Mi
+    cpu: 50m  # @schema type: [string, number]
+    memory: 50Mi  # @schema type: [string, number]
+    ephemeralStorage: 500Mi  # @schema type: [string, number]
 
 # -- Target CPU architecture for all pods of this chart. Empty imposes no
 # constraint. `arm64` pins the pods to arm64 nodes, adding both the

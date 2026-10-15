@@ -142,13 +142,22 @@
                     "additionalProperties": false,
                     "properties": {
                         "cpu": {
-                            "type": "string"
+                            "type": [
+                                "string",
+                                "number"
+                            ]
                         },
                         "ephemeralStorage": {
-                            "type": "string"
+                            "type": [
+                                "string",
+                                "number"
+                            ]
                         },
                         "memory": {
-                            "type": "string"
+                            "type": [
+                                "string",
+                                "number"
+                            ]
                         }
                     }
                 },
@@ -157,13 +166,22 @@
                     "additionalProperties": false,
                     "properties": {
                         "cpu": {
-                            "type": "string"
+                            "type": [
+                                "string",
+                                "number"
+                            ]
                         },
                         "ephemeralStorage": {
-                            "type": "string"
+                            "type": [
+                                "string",
+                                "number"
+                            ]
                         },
                         "memory": {
-                            "type": "string"
+                            "type": [
+                                "string",
+                                "number"
+                            ]
                         }
                     }
                 }
@@ -210,6 +228,9 @@
                                     "namespace": {
                                         "type": "string"
                                     },
+                                    "port": {
+                                        "type": "integer"
+                                    },
                                     "sectionName": {
                                         "type": "string"
                                     }
@@ -233,6 +254,9 @@
                                     },
                                     "namespace": {
                                         "type": "string"
+                                    },
+                                    "port": {
+                                        "type": "integer"
                                     },
                                     "sectionName": {
                                         "type": "string"

@@ -1,0 +1,15 @@
+suite: container resources
+templates:
+  - deployment.yaml
+tests:
+  - it: accepts a numeric CPU quantity
+    # Helm parses `--set resources.requests.cpu=1` as a number, which is a
+    # valid Kubernetes quantity, so the schema must not insist on a string.
+    set:
+      resources:
+        requests:
+          cpu: 1
+    asserts:
+      - equal:
+          path: spec.template.spec.containers[0].resources.requests.cpu
+          value: 1

@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Chart: the values schema regenerated in #167 rejected every `nodeSelector` entry and dropped the `architecture` enum. `nodeSelector`, `route.labels` and `route.annotations` take string maps again, `architecture` is limited to `""`, `amd64` and `arm64` again, `route.parentRefs` entries accept `port`, and `resources` quantities accept numbers.
+
+### Changed
+
+- Chart: the values schema validates `tolerations` entries against the Kubernetes Toleration type, so unknown or wrongly typed fields fail the install. `route.labels` and `route.annotations` values must be strings.
+
 ## [0.4.0] - 2026-10-15
 
 ### Added

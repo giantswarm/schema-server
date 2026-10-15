@@ -208,7 +208,7 @@ tests:
       architecture: arm32
     asserts:
       - failedTemplate:
-          errorPattern: "architecture"
+          errorPattern: "at '/architecture': value must be one of"
 
   - it: accepts a full Toleration, tolerationSeconds included
     # The schema refs the Kubernetes Toleration rather than the five keys the
@@ -223,3 +223,27 @@ tests:
       - equal:
           path: spec.template.spec.tolerations[0].tolerationSeconds
           value: 30
+
+  - it: rejects a misspelled Toleration field
+    # Without the Toleration ref the misspelling would pass the schema and the
+    # field would be silently dropped from the pod spec.
+    set:
+      tolerations:
+        - key: node.kubernetes.io/unreachable
+          operator: Exists
+          effect: NoExecute
+          tolerationSecond: 30
+    asserts:
+      - failedTemplate:
+          errorPattern: "at '/tolerations/0/tolerationSecond'"
+
+  - it: rejects a Toleration field of the wrong type
+    set:
+      tolerations:
+        - key: node.kubernetes.io/unreachable
+          operator: Exists
+          effect: NoExecute
+          tolerationSeconds: "30"
+    asserts:
+      - failedTemplate:
+          errorPattern: "at '/tolerations/0/tolerationSeconds': got string, want integer"
