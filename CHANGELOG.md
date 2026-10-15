@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Chart: `architecture` value (`""`, `amd64`, `arm64`) plus `nodeSelector` and `tolerations`. `arm64` sets both the `kubernetes.io/arch` node selector and the toleration for the arm64 node pool taint.
+- Publish the container image for `linux/amd64` and `linux/arm64`.
+
 ## [0.3.1] - 2026-03-27
 
 ### Fixed
