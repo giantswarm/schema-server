@@ -7,13 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Fixed
-
-- Chart: the values schema regenerated in #167 rejected every `nodeSelector` entry and dropped the `architecture` enum. `nodeSelector`, `route.labels` and `route.annotations` take string maps again, `architecture` is limited to `""`, `amd64` and `arm64` again, `route.parentRefs` entries accept `port`, and `resources` quantities accept numbers.
+## [0.4.1-rc.2] - 2026-10-15
 
 ### Changed
 
 - Chart: the values schema validates `tolerations` entries against the Kubernetes Toleration type, so unknown or wrongly typed fields fail the install. `route.labels` and `route.annotations` values must be strings.
+
+### Fixed
+
+- Chart: the values schema regenerated in #167 rejected every `nodeSelector` entry and dropped the `architecture` enum. `nodeSelector`, `route.labels` and `route.annotations` take string maps again, `architecture` is limited to `""`, `amd64` and `arm64` again, `route.parentRefs` entries accept `port`, and `resources` quantities accept numbers.
 
 ## [0.4.0] - 2026-10-15
 
@@ -74,7 +76,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added first version of the service.
 
-[Unreleased]: https://github.com/giantswarm/schema-server/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/giantswarm/schema-server/compare/v0.4.1-rc.2...HEAD
+[0.4.1-rc.2]: https://github.com/giantswarm/schema-server/compare/v0.4.0...v0.4.1-rc.2
 [0.4.0]: https://github.com/giantswarm/schema-server/compare/v0.3.1...v0.4.0
 [0.3.1]: https://github.com/giantswarm/schema-server/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/giantswarm/schema-server/compare/v0.2.0...v0.3.0
