@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- CI: architect orb 10.16.7, which pushes the chart to the git app catalogs with the architect GitHub App instead of the `catalogbot` account (giantswarm/giantswarm#34786).
 - Publish the container image for `linux/amd64` and `linux/arm64`, the default of the architect orb since the upgrade to v9 in [#150](https://github.com/giantswarm/schema-server/pull/150).
 
 ## [0.3.1] - 2026-03-27
