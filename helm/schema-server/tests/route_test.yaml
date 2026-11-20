@@ -2,7 +2,7 @@ suite: HTTPRoute values
 templates:
   - httproute.yaml
 tests:
-  - it: adds route labels and annotations to both routes
+  - it: adds route labels and annotations to the route
     # Guards the values schema: labels and annotations are free-form string
     # maps, so a regeneration that closes them must fail here.
     set:
@@ -14,7 +14,7 @@ tests:
           example.com/owner: honeybadger
     asserts:
       - hasDocuments:
-          count: 2
+          count: 1
       - equal:
           path: metadata.labels.team
           value: honeybadger
@@ -43,7 +43,6 @@ tests:
             - name: giantswarm-default
               namespace: envoy-gateway-system
               port: 443
-    documentIndex: 1
     asserts:
       - equal:
           path: spec.parentRefs[0].port
