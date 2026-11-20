@@ -16,12 +16,6 @@ ingress:
 route:
   enabled: false
   parentRefs:
-    redirect:  # @schema itemProperties: {group: {type: string}, kind: {type: string}, name: {type: string}, namespace: {type: string}, sectionName: {type: string}, port: {type: integer}}
-    - group: gateway.networking.k8s.io
-      kind: Gateway
-      name: giantswarm-default
-      namespace: envoy-gateway-system
-      sectionName: http
     https:  # @schema itemProperties: {group: {type: string}, kind: {type: string}, name: {type: string}, namespace: {type: string}, sectionName: {type: string}, port: {type: integer}}
     - group: gateway.networking.k8s.io
       kind: Gateway

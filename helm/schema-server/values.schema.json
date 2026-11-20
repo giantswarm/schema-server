@@ -252,33 +252,6 @@
                                     }
                                 }
                             }
-                        },
-                        "redirect": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "additionalProperties": false,
-                                "properties": {
-                                    "group": {
-                                        "type": "string"
-                                    },
-                                    "kind": {
-                                        "type": "string"
-                                    },
-                                    "name": {
-                                        "type": "string"
-                                    },
-                                    "namespace": {
-                                        "type": "string"
-                                    },
-                                    "port": {
-                                        "type": "integer"
-                                    },
-                                    "sectionName": {
-                                        "type": "string"
-                                    }
-                                }
-                            }
                         }
                     }
                 }
